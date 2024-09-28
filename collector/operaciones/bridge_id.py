@@ -13,10 +13,10 @@ def bri_id(ips,datos):
             cmdgen.UdpTransportTarget((server_ip, 161)),
             0,25,
             #Despliegue
-            #'1.3.6.1.2.1.17.1.1'
+            '1.3.6.1.2.1.17.1.1'
 
             #Simulación
-            '1.3.6.1.2.1.2.2.1.6'
+            #'1.3.6.1.2.1.2.2.1.6'
         )
         if errorIndication != None:
             f = 1
@@ -24,15 +24,16 @@ def bri_id(ips,datos):
         
 
         #Código para simulación
+        """
         for varBindTableRow in varBindTable:
             for name, val in varBindTableRow:
                 if  (name.prettyPrint()).split('.')[-1] == "1":
                     a[server_ip] = val.prettyPrint()[2::]
+        """
 
         #Código para despliegue
-        """
         for varBindTableRow in varBindTable:
             for name, val in varBindTableRow:
                     a[server_ip] = val.prettyPrint()[2::]
-        """
+        
     return a,f,fif
