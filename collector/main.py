@@ -5,8 +5,6 @@ import map_int
 import stp_blk
 import stp_info
 
-#Definición de una lista de direcciónes Ip de prueba.
-direc = ["10.0.2.1","10.0.2.2","10.0.2.3","10.0.2.4","10.0.2.5"]
 
 
 print("-------------------- EMPIEZA EL DESCUBRIMIENTO DE LA TOPOLOGIA ---------------------")
@@ -16,7 +14,7 @@ print("-------------- EJECUTANDO FASE 1 (RECOLECCION DE DATOS DEL YAML) --------
 current_dir = os.path.dirname(__file__)
 archivoDispositivos = os.path.join(current_dir, 'inventarios', 'dispositivos.yaml')
 datos = obt_infyam.infyam(archivoDispositivos)
-print(datos)
+direc = datos.keys()
 
 
 print("------------------- EJECUTANDO FASE 2 (INFORMACION DE STP) --------------------------")
