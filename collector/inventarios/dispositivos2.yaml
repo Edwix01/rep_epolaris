@@ -54,16 +54,14 @@ switchs_hpV5120:
 switchs_3comm:
   hosts:
     switch1:
-      host: 10.0.1.4 
-    switch2:
       host: 10.0.1.11   
-    switch3:
+    switch2:
       host: 10.0.1.15
-    switch4:
+    switch3:
       host: 10.0.1.17
-    switch5:
+    switch4:
       host: 10.0.1.18
-    switch6:
+    switch5:
       host: 10.0.1.19
   vars:
     usuario: networking
