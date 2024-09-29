@@ -6,6 +6,8 @@ import stp_blk
 import stp_info
 import obt_root
 
+import uptime
+import cpu
 import tplink.filtrarinfo
 import tplink.obt_tplink
 import tplink.sh_tplink
@@ -21,6 +23,9 @@ datos = obt_infyam.infyam(archivoDispositivos)
 direc =  list(datos.keys())
 b_root,froot,fifroot = obt_root.obtr(datos,direc[0])
 
+"""
+
+
 #Inicio de recolección de datos a través de SNMP
 print("-------------------- Inicio de Recolección de datos ---------------------")
 b_id,f1,fif1= bridge_id.bri_id(direc,datos)     #Bridge ID
@@ -33,9 +38,16 @@ iptp,credenciales = tplink.obt_tplink.filtplink(archivoDispositivos)
 tplink.sh_tplink.epmiko(credenciales[iptp[0]]["usuario"],credenciales[iptp[0]]["contrasena"], iptp)
 tp_d = tplink.filtrarinfo.fil_bid("b_id.txt")
 stn = tplink.tp_linkssh.tplink_id(b_root,st_inf,tp_d,iptp) #Información de STP {tabla de bridge designados, lista con identificador del puerco y su direccion mac}
+"""
+
+#Recolección de métricas
+diccionario_resultante = cpu.leer_cpu.crear_diccionario_host_marca(archivoDispositivos)
+tiempos,ft,fit = uptime.tiempoactivo(direc,datos)
+consumoscpu = cpu.mon_cpu(datos,diccionario_resultante)
+
 
 #Visualización de la información
-
+"""
 print("\n"+"-"*40+"Bridge ID"+"-"*40+"")
 print(b_id)
 print("-"*100+"\n")
@@ -56,3 +68,4 @@ print("-"*100+"\n")
 print("\n"+"-"*40+"Bridge Root"+"-"*40+"")
 print(b_root)
 print("-"*100+"\n")
+"""
