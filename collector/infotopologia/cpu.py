@@ -132,10 +132,8 @@ def mon_cpu(info,datos):
                     if datos[server_ip] == "switchs_hpV5120" or datos[server_ip] == "switchs_hpV1910":
                         if float(val.prettyPrint())>0:
                             sal[server_ip] = val.prettyPrint()
-                            print(val.prettyPrint())
                     else:
                         sal[server_ip] = val.prettyPrint()
-                        print(val.prettyPrint())
                 except TypeError:
                     pass
     return sal
