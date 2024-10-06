@@ -1,0 +1,22 @@
+{
+  "name": "nodejsapi",
+  "version": "1.0.0",
+  "description": "Inicio de la Introduccion Primer proyecto creado en GITHUB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Edwix01/rep_epolaris.git"
+  },
+  "author": "Edwin Lima",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Edwix01/rep_epolaris/issues"
+  },
+  "homepage": "https://github.com/Edwix01/rep_epolaris#readme",
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}

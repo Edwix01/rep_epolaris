@@ -11,7 +11,10 @@ def filtplink(nombre):
     Return:
     ips_tplink(list):           Lista de Direcciones IP de los switch TpLink
     credenciales_tplink(list):  Lista con las credenciales de los switch TpLink
+    
     """
+    ips_tplink=[]
+    credenciales_tplink=[]
     with open(nombre, "r") as archivo:
        datos = yaml.safe_load(archivo)
     ips_tplink = []
